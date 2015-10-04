@@ -1,0 +1,18 @@
+-@page_title = "Admin | CMS Settings"
+%h2 CMS SETTINGS (CHANGING VALUES HERE WILL BREAK NAVIGATION STRUCTURE!)
+= link_to('Add Page', {:action => 'new'}, :class => 'btn btn-xs btn-warning action new')
+%div
+  = pluralize(@page_section_contents.size, 'page')
+  found
+%table.admin-table{:summary => "Page List"}
+  %tr
+    %th ID
+    %th Section KEY
+    %th Actions
+  - @page_section_contents.each do |page|
+    %tr{:class => cycle('odd', 'even')}
+      %td= page.id
+      %td= page.page_section_key
+      %td.actions
+        = link_to'Edit', {:action => 'edit', :id => page.id}, class: 'btn btn-xs btn-warning'
+       

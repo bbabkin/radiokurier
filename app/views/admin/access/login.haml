@@ -1,0 +1,12 @@
+- @page_title = "Admin Login"
+.login
+  .login-box
+    .logo
+      =image_tag "logo_lg.png"
+    .login-form
+      =form_tag(:action => 'attempt_login') do 
+        .username=text_field_tag :username, nil, :placeholder => 'Username'
+        .password=password_field_tag :password, nil, :placeholder => 'Password'
+        .login-button=submit_tag("Log in")
+
+

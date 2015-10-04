@@ -1,0 +1,10 @@
+- @page_title = "New Page"
+= link_to("Back to Page List", {:action => 'index'}, :class => 'btn btn-xs btn-warning')
+.new
+  %h2 Create New File
+  = form_for [:admin, @page_section_contents] do |f|
+    -if @page_section_contents.errors.any?
+      #error_explanation
+    = render(:partial => "form", :locals => {:f => f})
+    .form-buttons
+      = submit_tag("Create New Page")

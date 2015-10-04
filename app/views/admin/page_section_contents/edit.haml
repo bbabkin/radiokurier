@@ -1,0 +1,8 @@
+.scrollable
+  = form_for [:admin, @page_section_content], :html => {:multipart => true} do |f|
+    = render(:partial => "form", :locals => {:f => f})
+    .form-buttons
+      = submit_tag("update")
+
+
+

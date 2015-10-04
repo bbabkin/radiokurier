@@ -12,5 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= require_tree .
+//= require bootstrap-sprockets
+//= require tinymce-jquery
+//= require z.jquery.fileupload
+//= require direct_upload
+//= require wow
+//= require underscore
+//= require gmaps/google
+//= require map
+
+

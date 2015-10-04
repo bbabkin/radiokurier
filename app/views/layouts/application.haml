@@ -4,7 +4,7 @@
     %meta{:content => "width=device-width, initial-scale=1,minimum-scale=0.1, maximum-scale=1", :name => "viewport"}/
     %meta{:content => "Radio Kurier", :name => "description"}/
     %title
-      Radio Curier#{" | #{@page_title}" if @page_title}
+      Радио Курьер #{" | #{@page_title}" if @page_title}
     %link{:href => "https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic", :rel => "stylesheet"}/
     = stylesheet_link_tag "application", media: 'all'
     = javascript_include_tag :modernizr
@@ -15,9 +15,6 @@
   
   %body.content-body
     = yield
-      
-
-
   =javascript_include_tag "application"
 
 

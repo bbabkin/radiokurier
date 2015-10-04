@@ -6,7 +6,7 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-module Radiokurier
+module Sasgold
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -21,6 +21,17 @@ module Radiokurier
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+  config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = true
+    config.action_mailer.smtp_settings = {
+:address => "smtp.gmail.com",
+:port => 587,
+:domain => "google.com",
+:authentication =>"plain",
+:user_name => ENV['GMAIL_USERNAME'],
+:password => ENV['GMAIL_PASSWORD'],
+:enable_starttls_auto => true
+}
   end
 end
+

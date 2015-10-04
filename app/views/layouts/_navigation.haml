@@ -1,0 +1,19 @@
+.skip-to-content
+  %a{:id =>"skip-to-content", :tabindex => 1, "aria-label" => "Skip to Content"}Skip to content 
+%nav.navbar.navbar-sas.navbar-static-top
+  .container-fluid.navbar-container
+    .navbar-header
+      .collapse-button
+        %button.navbar-toggle{data: {tabindex: 3, "aria-label" => "Main Menu", target: ".navbar-collapse", toggle: "collapse", theme: "collapse-theme"}, type: "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+      =link_to root_path, {tabindex: 2, "aria-label" => "Home Page", class: "logolink"} do
+        .logoimg
+    .collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-nav-main.pull-right
+        %li.lmenuitem.dropdown_listbutton= link_to "о нас", about_path
+        %li.lmenuitem.dropdown_listbutton= link_to "архив", archive_path
+        %li.lmenuitem.dropdown_listbutton= link_to "реклама", advert_path
+        %li.lmenuitem.dropdown_listbutton= link_to "контакт", contact_path
+        

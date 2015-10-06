@@ -1,0 +1,30 @@
+%table{:summary => "Team member entry form fields"}
+  %tr
+    %th= f.label(:title, "имя")
+    %td= f.text_field :title
+  %tr
+    %th= f.label(:summary, "описание")
+    %td= f.text_area :summary, size: '60x20'
+  %tr
+    %th= f.label(:position, "приоритет")
+    %td= f.select(:position, 1..@member_count)
+  
+  %tr
+    %th= f.label :type, "категория"
+    %td= f.select :type, 
+      options_for_select([['гость','1'],['талант','2'],['не обозначен','3']], @member_entry.section_id), { :class => 'span3 controls controls-row' } 
+  %tr
+    %th= f.label(:photo, "фото (150x150px)")
+    %td= f.file_field(:photo)
+  -if @pdf.photo.present?
+    %tr
+      %td
+        =image_tag @pdf.photo
+  %tr
+    %th= f.label(:permalink, "аудио")
+    %td= f.file_field(:permalink)
+  -if @pdf.permalink.present? 
+    %tr
+      %th аудио ссылка
+      %td= f.text_field :permalink, size: "80" 
+

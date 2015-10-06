@@ -30,10 +30,11 @@ Rails.application.routes.draw do
 		post 'attempt_login', :to => "access#attempt_login"
 
 	end
-
+        get "/terms" => "public#terms"
+	get "/privacy" => "public#privacy"
 	get "/about" => "public#about"
 	get "/advert" => "public#advert"
-	get "/contect" => "public#contact"
+	get "/contact" => "public#contact"
 	get "/archive" => "public#archive"
 	post '/tinymce_assets' => 'tinymce_assets#create'
 	

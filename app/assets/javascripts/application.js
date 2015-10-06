@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require tinymce-jquery
-//= require z.jquery.fileupload
 //= require direct_upload
 //= require wow
 //= require underscore

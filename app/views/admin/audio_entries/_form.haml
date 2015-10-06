@@ -1,0 +1,25 @@
+%table{:summary => "Team member entry form fields"}
+  %tr
+    %th= f.label(:data, "дата")
+  
+  %tr
+    %th= f.label(:title, "название)
+    %td= f.text_field :title
+  %tr
+    %th= f.label(:summary, "описание")
+    %td= f.text_area :summary, size: '60x20'
+  %tr
+    %th= f.label(:photo, "фото (150x150px)")
+    %td= f.file_field(:photo)
+  -if @pdf.photo.present?
+    %tr
+      %td
+        =image_tag @pdf.photo
+  %tr
+    %th= f.label(:permalink, "аудио")
+    %td= f.file_field(:permalink)
+  -if @pdf.permalink.present? 
+    %tr
+      %th аудио ссылка
+      %td= f.text_field :permalink, size: "80" 
+

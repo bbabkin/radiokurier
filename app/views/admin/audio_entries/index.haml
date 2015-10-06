@@ -1,0 +1,20 @@
+-@page_title = "Admin | Team Members"
+%h2 трансляции 
+= link_to('добавить трансляцию', {:action => 'new'}, :class => 'btn btn-xs btn-warning action new')
+%table.admin-table{:summary => "Team Member List"}
+  %tr
+    %th фото
+    %th имя
+    %th тип
+    %th действия
+  - @audio_entrys.each do |performer|
+    %tr{:class => cycle('odd', 'even')}
+      -if audio_entry.attachment.exists?
+        %td= image_tag audio_entry.attachment.url(:thumb), class: "audio_entry photo"
+      -else
+        %td= image_tag "noavatar_120.jpg", class: "audio_entry photo"
+      %td audio_entry.name
+      %td.actions
+        = link_to'правка', {:action => 'edit', :id => audio_entry.id}, class: 'btn btn-xs btn-warning'
+        = link_to"удалить", {:action => 'delete', :id => audio_entry.id}, class: "btn btn-xs btn-danger", confirm: "уверены?"
+

@@ -1,6 +1,6 @@
 - @page_title = "Admin Users List"
 %h2 Admin Users
-= link_to('Add New Admin User', {:action => 'new'}, :class => 'action new')
+= link_to('добавить нового админа', {:action => 'new'}, :class => 'action new')
 %div
 	= pluralize(@admin_users.size, 'admin user')
 	found
@@ -12,4 +12,4 @@
 		%tr{:class => cycle('odd', 'even')}
 			%td= admin_user.username
 			%td.actions
-				= link_to('Edit', {:action => 'edit', :id => admin_user.id}, class: 'btn btn-xs btn-default')
+				= link_to('правка', {:action => 'edit', :id => admin_user.id}, class: 'btn btn-xs btn-default')

@@ -13,7 +13,7 @@ class Admin::AccessController < ApplicationController
   end
 
   def login
-    render :layout => "adminaccess"
+    render :layout => "admin_access"
   end
 
   def attempt_login

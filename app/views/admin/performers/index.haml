@@ -1,0 +1,26 @@
+-@page_title = "Admin | Team Members"
+%h2 исполнители
+= link_to('Add Team Member', {:action => 'new'}, :class => 'btn btn-xs btn-warning action new')
+%table.admin-table{:summary => "Team Member List"}
+  %tr
+    %th фото
+    %th имя
+    %th тип
+    %th действия
+  - @performers.each do |performer|
+    %tr{:class => cycle('odd', 'even')}
+      -if performer.attachment.exists?
+        %td= image_tag performer.attachment.url(:thumb), class: "member photo"
+      -else
+        %td= image_tag "noavatar_120.jpg", class: "performer photo"
+      %td= performer.name
+      - if performer.section_id == 1
+        %td Director
+      - if performer.section_id == 2
+        %td Manager
+      - if performer.section_id == 3
+        %td Both
+      %td.actions
+        = link_to'правка', {:action => 'edit', :id => performer.id}, class: 'btn btn-xs btn-warning'
+        = link_to"удалить", {:action => 'delete', :id => performer.id}, class: "btn btn-xs btn-danger", confirm: "уверены?"
+

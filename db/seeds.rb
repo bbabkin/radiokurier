@@ -12,4 +12,6 @@ PageSectionContent.create page_section_key: "about", locale: "en", content: "Thi
 PageSectionContent.create page_section_key: "archive", locale: "en", content: "This Archivecontent is empty"
 PageSectionContent.create page_section_key: "advert", locale: "en", content: "This Advert content is empty"
 PageSectionContent.create page_section_key: "contact", locale: "en", content: "This Contact content is empty"
+PageSectionContent.create page_section_key: "terms", locale: "en", content: "This Contact content is empty"
+PageSectionContent.create page_section_key: "privacy", locale: "en", content: "This Contact content is empty"
 

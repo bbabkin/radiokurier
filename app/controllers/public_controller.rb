@@ -5,14 +5,14 @@ class PublicController < ApplicationController
   def about
     @page_section_content = PageSectionContent.find_by(page_section_key: 'about', locale: 'en')
   end
-    def archive
+  def archive
     @page_section_content = PageSectionContent.find_by(page_section_key: 'archive', locale: 'en')
   end
     def advert
     @page_section_content = PageSectionContent.find_by(page_section_key: 'advert', locale: 'en')
   end
   def contact
-    @page_section_content = PageSectionContent.find_by(page_section_key: 'home', locale: 'en')
+    @page_section_content = PageSectionContent.find_by(page_section_key: 'contact', locale: 'en')
   end
 
   def privacypoicy

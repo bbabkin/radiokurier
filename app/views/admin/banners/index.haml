@@ -9,7 +9,7 @@
     %th действия
   - @banners.each do |banner|
     %tr{:class => cycle('odd', 'even')}
-      %td= image_tag banner.image1.url(:thumb), class: "banner"
+      %td= image_tag banner.image1.url, class: "banner"
       %td= banner.position
       %td= banner.permalink
       %td.actions

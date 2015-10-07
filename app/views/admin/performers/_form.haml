@@ -3,8 +3,8 @@
     %th= f.label(:title, "имя")
     %td= f.text_field :title
   %tr
-    %th= f.label(:summary, "описание")
-    %td= f.text_area :summary, size: '60x20'
+    %th= f.label(:description, "описание")
+    %td= f.text_area :description, size: '60x20'
   %tr
     %th= f.label(:position, "приоритет")
     %td= f.select(:position, 1..@member_count)

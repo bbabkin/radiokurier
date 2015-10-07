@@ -7,7 +7,7 @@
     %td= f.text_area :description, size: '60x20'
   %tr
     %th= f.label(:position, "приоритет")
-    %td= f.select(:position, 1..@member_count)
+    %td= f.select(:position, 1..@performer_count)
   
   %tr
     %th= f.label :type, "категория"

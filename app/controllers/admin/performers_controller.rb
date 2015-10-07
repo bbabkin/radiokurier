@@ -55,7 +55,7 @@ class Admin::PerformersController < ApplicationController
 	private
 
 	def performer_params
-		params.require(:performer).permit [:type, :permalink, :title, :description, :position, :image]
+		params.require(:performer).permit [:type, :permalink, :title, :description, :position, :photo]
 	end
 end
 

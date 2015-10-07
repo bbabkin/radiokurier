@@ -1,0 +1,10 @@
+- @page_title = "Delete Team Member Entry"
+= link_to("<< назад", {:action => 'index'}, :class => 'back-link')
+.delete
+  %h2 Удаляем исполнителя
+  = form_for(:member_entry, :method => :delete, :url => {:action => 'destroy', :id => @member_entry.id}) do |f|
+    %p уверены?
+    %p.reference-name= @member_entry.name
+    .form-buttons
+      = submit_tag("удаляем")
+

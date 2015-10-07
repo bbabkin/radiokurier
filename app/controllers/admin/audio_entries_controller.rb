@@ -15,7 +15,7 @@ class Admin::AudioEntriesController < ApplicationController
 		@audio_entry = AudioEntry.new(audio_entry_params) 
 		if @audio_entry.save
 			flash[:notice] = 'выпуск родился!'
-      redirect_to admin_audio_entrys_path       
+      redirect_to admin_audio_entries_path       
 
 		else
 			render ('new')
@@ -32,7 +32,7 @@ class Admin::AudioEntriesController < ApplicationController
 
 		if @audio_entry.update_attributes(audio_entry_params)
 			flash[:notice] = "обновили!"
-			redirect_to admin_audio_entrys_path
+			redirect_to admin_audio_entries_path
 		else
 			render :edit
 		end

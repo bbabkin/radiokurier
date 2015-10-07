@@ -7,7 +7,7 @@
     %th имя
     %th тип
     %th действия
-  - @audio_entrys.each do |performer|
+  - @audio_entries.each do |performer|
     %tr{:class => cycle('odd', 'even')}
       -if audio_entry.attachment.exists?
         %td= image_tag audio_entry.attachment.url(:thumb), class: "audio_entry photo"

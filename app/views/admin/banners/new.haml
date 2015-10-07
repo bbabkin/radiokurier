@@ -1,8 +1,8 @@
-- @page_title = "New News Article"
+- @page_title = "добавить исполнителя"
 = link_to("<< назад", {:action => 'index'}, :class => 'btn btn-primary')
 .products.new
-  %h2 добавить трансляцию
-  = form_for(:audio_entry, :url => {:action => 'create'}) do |f|
+  %h2 добавить баннер
+  = form_for(:banner, :url => {:action => 'create'}) do |f|
     = render(:partial => "form", :locals => {:f => f})
     .form-buttons
       = submit_tag("создать")

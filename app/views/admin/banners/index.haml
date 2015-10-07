@@ -1,0 +1,21 @@
+-@page_title = "Admin | Team Members"
+%h2 исполнители
+= link_to('добавить новый баннер', {:action => 'new'}, :class => 'btn btn-xs btn-warning action new')
+%table.admin-table{:summary => "Team Member List"}
+  %tr
+    %th картинка
+    %th порядок
+    %th ссылка
+    %th действия
+  - @banners.each do |banner|
+    %tr{:class => cycle('odd', 'even')}
+      -if banner.image.exists?
+        %td= image_tag banner.image.url(:thumb), class: "banner"
+      -else
+        %td= image_tag "noimage_150.jpg", class: "banner"
+      %td= banner.position
+      %td= banner.permalink
+      %td.actions
+        = link_to'правка', {:action => 'edit', :id => banner.id}, class: 'btn btn-xs btn-warning'
+        = link_to"удалить", {:action => 'delete', :id => banner.id}, class: "btn btn-xs btn-danger", confirm: "уверены?"
+

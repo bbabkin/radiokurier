@@ -2,7 +2,7 @@
 = link_to("<< назад", {:action => 'index'}, :class => 'btn btn-primary')
 .products.new
   %h2 добавить исполнителя
-  = form_for(:news_entry, :url => {:action => 'create'}) do |f|
+  = form_for(:performer, :url => {:action => 'create'}) do |f|
     = render(:partial => "form", :locals => {:f => f})
     .form-buttons
       = submit_tag("создать")

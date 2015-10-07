@@ -1,9 +1,10 @@
 %table{:summary => "Team member entry form fields"}
   %tr
     %th= f.label(:data, "дата")
+    %td= f.date_field :date
   
   %tr
-    %th= f.label(:title, "название)
+    %th= f.label(:title, "название")
     %td= f.text_field :title
   %tr
     %th= f.label(:summary, "описание")
@@ -11,15 +12,15 @@
   %tr
     %th= f.label(:photo, "фото (150x150px)")
     %td= f.file_field(:photo)
-  -if @pdf.photo.present?
+  -if @audio_entry.image.present?
     %tr
       %td
-        =image_tag @pdf.photo
+        =image_tag @performer.image
   %tr
     %th= f.label(:permalink, "аудио")
     %td= f.file_field(:permalink)
-  -if @pdf.permalink.present? 
+  -if @audio_entry.permalink.present? 
     %tr
-      %th аудио ссылка
+      %th= f.label(:summary, "аудио ссылка")
       %td= f.text_field :permalink, size: "80" 
 

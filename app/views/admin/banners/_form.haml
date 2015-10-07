@@ -1,0 +1,16 @@
+%table{:summary => "Team member entry form fields"}
+  %tr
+    %th= f.label(:title, "название")
+    %td= f.text_field :title
+  %tr
+    %th= f.label(:position, "приоритет")
+    %td= f.select(:position, 1..@banner_count)
+  %tr
+    %th= f.label(:image1, "картинка1 (150x150px)")
+    %td= f.file_field(:image1)
+  %tr
+    %th= f.label(:image2, "картинка 2 (150x150px)")
+    %td= f.file_field(:image2)
+  %tr
+    %th= f.label(:permalink, "ссылка")
+    %td= f.text_field(:permalink)

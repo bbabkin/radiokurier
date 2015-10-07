@@ -11,7 +11,7 @@ class Admin::PerformersController < ApplicationController
 		@performer_count =Performer.count + 1
 	end 
 	def create
-		@performer = Performer.new(audio_entry_params) 
+		@performer = Performer.new(performer_params) 
 		if @performer.save
 			flash[:notice] = 'У нас новый исполнитель!'
       redirect_to admin_performers_path       

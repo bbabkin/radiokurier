@@ -7,20 +7,20 @@
     %th= f.label(:title, "название")
     %td= f.text_field :title
   %tr
-    %th= f.label(:summary, "описание")
-    %td= f.text_area :summary, size: '60x20'
+    %th= f.label(:description, "описание")
+    %td= f.text_area :description, size: '60x20'
   %tr
-    %th= f.label(:photo, "фото (150x150px)")
-    %td= f.file_field(:photo)
-  -if @audio_entry.image.present?
+    %th= f.label(:image, "фото (150x150px)")
+    %td= f.file_field(:image)
+  -if @audio_entry.image
     %tr
       %td
-        =image_tag @performer.image
+        =image_tag @audio_entry.image
   %tr
     %th= f.label(:permalink, "аудио")
     %td= f.file_field(:permalink)
-  -if @audio_entry.permalink.present? 
+  -if @audio_entry.permalink 
     %tr
-      %th= f.label(:summary, "аудио ссылка")
+      %th= f.label(:permalink, "аудио ссылка")
       %td= f.text_field :permalink, size: "80" 
 

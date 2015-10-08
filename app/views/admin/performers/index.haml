@@ -13,8 +13,8 @@
         %td= image_tag performer.photo.url, class: "member photo"
       -else
         %td= image_tag "noimage_150.jpg", class: "performer photo"
-      -if performer.name
-        %td performer.name
+      -if performer.title
+        %td performer.title
       -else
         %td без имени
       - if performer.role == 1

@@ -19,5 +19,6 @@
 //= require underscore
 //= require gmaps/google
 //= require map
+//= require scripts
 
 

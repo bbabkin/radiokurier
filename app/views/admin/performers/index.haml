@@ -26,4 +26,6 @@
       %td.actions
         = link_to'правка', {:action => 'edit', :id => performer.id}, class: 'btn btn-xs btn-warning'
         = link_to"удалить", {:action => 'delete', :id => performer.id}, class: "btn btn-xs btn-danger", confirm: "уверены?"
+        = link_to 'прослушать', performer.permalink, class: "html5"
+        %section{:id => 'audio'}
 

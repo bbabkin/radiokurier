@@ -10,9 +10,9 @@
     %td= f.select(:position, 1..@performer_count)
   
   %tr
-    %th= f.label :type, "категория"
-    %td= f.select :type, 
-      options_for_select([['гость','1'],['талант','2'],['не обозначен','3']], @performer.type), { :class => 'span3 controls controls-row' } 
+    %th= f.label :role, "категория"
+    %td= f.select :role, 
+      options_for_select([['гость','1'],['талант','2'],['не обозначен','3']], @performer.role), { :class => 'span3 controls controls-row' } 
   %tr
     %th= f.label(:photo, "фото (150x150px)")
     %td= f.file_field(:photo)

@@ -10,14 +10,14 @@
   - @performers.each do |performer|
     %tr{:class => cycle('odd', 'even')}
       -if performer.image.exists?
-        %td= image_tag performer.image.url(:thumb), class: "member photo"
+        %td= image_tag performer.image.url, class: "member photo"
       -else
         %td= image_tag "noimage_150.jpg", class: "performer photo"
-      - if performer.section_id == 1
+      - if performer.role == 1
         %td гость
-      - if performer.section_id == 2
+      - if performer.role == 2
         %td талант
-      - if performer.section_id == 3
+      - if performer.role == 3
         %td не обозначено
       %td.actions
         = link_to'правка', {:action => 'edit', :id => performer.id}, class: 'btn btn-xs btn-warning'

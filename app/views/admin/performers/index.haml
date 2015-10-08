@@ -1,6 +1,8 @@
 -@page_title = "Admin | Team Members"
-%section{:id => 'audio', :class => 'fadeInDown'}
-%h2 исполнители
+#audio-wrap
+  %section{:id => 'audio', :class => 'player'}
+  #player-close
+%h2.animated.bounce исполнители
 = link_to('добавить нового исполнителя', {:action => 'new'}, :class => 'btn btn-xs btn-warning action new')
 %table.admin-table{:summary => "Team Member List"}
   %tr
@@ -26,6 +28,6 @@
         %td не обозначено
       %td.actions
         = link_to'правка', {:action => 'edit', :id => performer.id}, class: 'btn btn-xs btn-warning'
+        = link_to 'прослушать', performer.permalink.url, class: "btn btn-xs btn-default html5"
         = link_to"удалить", {:action => 'delete', :id => performer.id}, class: "btn btn-xs btn-danger", confirm: "уверены?"
-        = link_to 'прослушать', performer.permalink.url, class: "html5"
 

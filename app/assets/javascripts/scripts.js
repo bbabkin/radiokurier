@@ -9,18 +9,18 @@ $(document).ready(function() {
  
         var url = $(this).attr('href');
         $('<source>').attr('src', url).appendTo(audio);
-        audio.play();
 	audioWrap.style.visibility = "visible";
 	audioWrap.className = "animated fadeInDown";
 	audioSection.html(audio);
-        return false;
+        audioSection.trigger('play')
+	return false;
     });
     $('#player-close').click(function(){
 	var audio = $('<audio>', {
              controls : 'controls'
         });
 	audioWrap.className = "animated fadeOutUp";
-	audio.stop();
+        audioSection.trigger('stop')
     
     });
 });

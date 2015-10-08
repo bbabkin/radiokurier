@@ -1,6 +1,6 @@
 $(document).ready(function() {
     var audioSection = $('section#audio');
-    $('a.html5').onload(function() {
+    $('a.html5').click(function() {
  
         var audio = $('<audio>', {
              controls : 'controls'

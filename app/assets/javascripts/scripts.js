@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('a.html5').click(function() {
  
         var audio = $('<audio>', {
-             controls : 'controls'
+             controls : 'controls autoplay'
         });
  
         var url = $(this).attr('href');

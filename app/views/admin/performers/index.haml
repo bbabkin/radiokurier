@@ -28,6 +28,6 @@
         %td не обозначено
       %td.actions
         = link_to'правка', {:action => 'edit', :id => performer.id}, class: 'btn btn-xs btn-warning'
-        = link_to 'прослушать', performer.permalink.url, class: "btn btn-xs btn-default html5"
+        = link_to 'прослушать', performer.permalink.url, class: "btn btn-xs btn-primary html5"
         = link_to"удалить", {:action => 'delete', :id => performer.id}, class: "btn btn-xs btn-danger", confirm: "уверены?"
 

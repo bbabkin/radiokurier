@@ -1,5 +1,6 @@
-$(function() {
+$(document).ready(function() {
     var audioSection = $('section#audio');
+    $('a.html5').onload(function() {
  
         var audio = $('<audio>', {
              controls : 'controls'
@@ -10,3 +11,4 @@ $(function() {
         audioSection.html(audio);
         return false;
     });
+});

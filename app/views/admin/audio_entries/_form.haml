@@ -17,17 +17,10 @@
       %td
         =image_tag @audio_entry.image
   %tr
-    %th= f.label(:permalink, "MP3 аудио")
+    %th= f.label(:permalink, "аудио")
     %td= f.file_field(:permalink)
-  %tr
-    %th= f.label(:permaogg, "OGG аудио (для Мозиллы)")
-    %td= f.file_field(:permalogg)
   -if @audio_entry.permalink 
     %tr
-      %th= f.label(:permalink, "MP3 аудио ссылка")
+      %th= f.label(:permalink, "аудио ссылка")
       %td= f.text_field :permalink, size: "80" 
-  -if @audio_entry.permaogg 
-    %tr
-      %th= f.label(:permaogg, "OGG аудио ссылка")
-      %td= f.text_field :permaogg, size: "80" 
 

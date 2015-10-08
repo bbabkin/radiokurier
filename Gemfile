@@ -80,7 +80,7 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'flexbox-sass'
-  gem 'i18n', github: 'svenfuchs/i18n'
+  gem 'rails-i18n', github: 'svenfuchs/rails-i18n', branch: 'master' # For 4.x
   gem 'russian'
 end
 

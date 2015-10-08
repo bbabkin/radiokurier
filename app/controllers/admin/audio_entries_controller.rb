@@ -56,6 +56,6 @@ class Admin::AudioEntriesController < ApplicationController
 	private
 
 	def audio_entry_params
-		params.require(:audio_entry).permit [:date, :permalink, :title, :description, :image]
+		params.require(:audio_entry).permit [:date, :permalink, :permaogg, :title, :description, :image]
 	end
 end

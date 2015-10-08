@@ -163,29 +163,10 @@ width:100%; background-color: #ddd!important; height:1px!important;
 }}
 
 
-/*-------- Site Map ----------*/
-.sitemap-nav{
-	list-style-type: none;
 
-.sitemap-link{
-h2{
-font-size: 0.95em}
-}
-.sitemap-sub{
-	list-style-type: none;
- padding-left: 10px}
-.sitemap-sub-link{
-h3{
-font-size: 0.9em
-}
-}
-.sitemap-sub-sub{
-	list-style-type: none;
-padding-left:10px;}
-.sitemap-sub-sub-link{
-list-style-type: none;
-}
-}
+
+
+
 #audio{
 position: fixed;
 top: 0px;
@@ -193,6 +174,9 @@ left: 50%;
 margin-left: -20px;
 padding:15px;
 background: #eee;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
 }
 
 

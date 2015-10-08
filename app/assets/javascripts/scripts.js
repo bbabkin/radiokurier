@@ -1,4 +1,5 @@
-$(function() {
+$(document).ready(function() {
+    var audioSection = $('section#audio');
  
         var audio = $('<audio>', {
              controls : 'controls'

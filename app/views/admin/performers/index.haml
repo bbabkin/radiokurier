@@ -9,8 +9,8 @@
     %th действия
   - @performers.each do |performer|
     %tr{:class => cycle('odd', 'even')}
-      -if performer.image.exists?
-        %td= image_tag performer.image.url, class: "member photo"
+      -if performer.photo.exists?
+        %td= image_tag performer.photo.url, class: "member photo"
       -else
         %td= image_tag "noimage_150.jpg", class: "performer photo"
       - if performer.role == 1

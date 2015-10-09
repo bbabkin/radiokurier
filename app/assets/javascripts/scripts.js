@@ -6,13 +6,13 @@ $(document).ready(function() {
         var audio = $('<audio>', {
              controls : 'controls'
         });
-	$('player').trigger('pause');
+	$('player').controls.trigger('pause');
         var url = $(this).attr('href');
         $('<source>').attr('src', url).appendTo(audio);
 	audioWrap.style.visibility = "visible";
 	audioWrap.className = "animated fadeInDown";
 	audioSection.html(audio);
-	audio.controls.trigger('play');
+	$('player')controls.trigger('play');
 	return false;
     });
     $('#player-close').click(function(){

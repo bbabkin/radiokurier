@@ -29,11 +29,11 @@
         .performer-description=g.description
       .col-lg-1.col-1.col-sm-2.col-xs-2.performer-play
         = link_to '', g.permalink.url, class: "glyphicon glyphicon-play html5"
-  .row
-    %h1.performer-title.center Наши таланты
   .row  
     .col-12
       %hr.fullhr
+  .row
+    %h1.performer-title.center Наши таланты
   -@talents.each do |g|
     .row
       .col-lg-4.col-4.col-sm-12.performer-photo

@@ -14,7 +14,7 @@
     %td= f.select :role, 
       options_for_select([['гость','1'],['талант','2'],['не обозначен','3']], @performer.role), { :class => 'span3 controls controls-row' } 
   %tr
-    %th= f.label(:photo, "фото (150x150px)")
+    %th= f.label(:photo, "фото (300x300px)")
     %td= f.file_field(:photo)
   -if @performer.photo.present?
     %tr

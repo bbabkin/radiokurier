@@ -17,11 +17,10 @@ $(document).ready(function() {
 	return false;
     });
     $('#player-close').click(function(){
-	var audio = $('<audio>', {
+	jQuery('audio').each(function(){ this.pause() });
+	    var audio = $('<audio>', {
              controls : 'controls'
         });
 	audioWrap.className = "animated fadeOutUp";
-	audio.trigger('pause');
-    
     });
 });

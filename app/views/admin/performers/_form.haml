@@ -23,8 +23,4 @@
   %tr
     %th= f.label(:permalink, "аудио")
     %td= f.file_field(:permalink)
-  -if @performer.permalink.present? 
-    %tr
-      %th аудио ссылка
-      %td= f.text_field :permalink, size: "80" 
 

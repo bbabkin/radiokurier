@@ -22,10 +22,10 @@
         .performer-description=g.description
       .col-lg-1.col-1.col-sm-2.col-xs-2.performer-play
         = link_to '', g.permalink.url, class: "glyphicon glyphicon-play html5"
-        .glyphicon.glyphicon-play
   .row
-    %h1.performer-title.center Наши гости
-  -@guests.each do |g|
+    %h1.performer-title.center Наши таланты:w
+
+  -@talents.each do |g|
     .row
       .col-lg-4.col-4.col-sm-12.performer-photo
         =image_tag g.photo.url
@@ -34,6 +34,5 @@
         .performer-description=g.description
       .col-lg-1.col-1.col-sm-2.col-xs-2.performer-play
         = link_to '', g.permalink.url, class: "glyphicon glyphicon-play html5"
-        .glyphicon.glyphicon-play
 
   

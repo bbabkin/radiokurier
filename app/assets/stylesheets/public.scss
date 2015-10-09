@@ -4,6 +4,39 @@
 .logoimg{
 width:160px;
 height:70px;
+margin-top:3px;
 background:url(/assets/logo.png) center center no-repeat;
 padding-top:0px;
 }
+.navbar-container{
+	height: 92px;
+background:url(/assets/mesh.jpg) bottom center no-repeat;
+
+}
+.lmenuitem{
+	background-color: rgba(255,255,255,0.0);
+font-weight: 800;
+a{
+color: #1b706f!important;
+text-shadow: 0 0 10px #fff;
+&:hover, &:focus{
+background-color: rgba(255,255,255,0)!important;
+text-shadow: 0 0 5px #fff;
+       text-decoration:none!important;	
+color: #ed1c24!important;
+}
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+
+}
+&:hover, &:focus{
+
+	background-color: rgba(255,255,255,0.8);
+}
+	-webkit-transition: background .5s ease-in-out;
+	-moz-transition: background .5s ease-in-out;
+	transition: background .5s ease-in-out;
+}
+.navbar-toggle{background-color: #fff;}
+.icon-bar{background-color: #1b706f;}

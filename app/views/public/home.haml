@@ -1,2 +1,9 @@
-%p
-  = @page_section_content.content.html_safe
+#audio-wrap
+  %section{:id => 'audio', :class => 'player'}
+  #player-close.glyphicon.glyphicon-remove
+.container
+  .row
+    .col-12.center
+      =link_to "Слушать последний выпуск", @audio_entry.permalink.url, class: "html5 btn btn-default btn-courier btn-lg"
+    .col-12
+      = @page_section_content.content.html_safe

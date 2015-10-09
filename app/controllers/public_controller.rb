@@ -1,6 +1,9 @@
 class PublicController < ApplicationController
   def home
     @page_section_content = PageSectionContent.find_by(page_section_key: 'home', locale: 'en')
+    @audio_entry = AudioEntry.order(date: :desc).first
+    
+
   end
   def about
     @page_section_content = PageSectionContent.find_by(page_section_key: 'about', locale: 'en')

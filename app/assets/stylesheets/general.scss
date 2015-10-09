@@ -14,7 +14,6 @@ blockquote {font-size: 1em !important}
 .clearfix:after { clear: both; }
 
 body {
-		background-color: #000;
 	font-size:1em;
 	font-family: $mainfont !important;
 		// -webkit-background-size: cover;
@@ -24,8 +23,6 @@ body {
 }
 
 a {
-	color: #0820af;
-	text-decoration: underline!important;
   &:hover,&:focus{color: #0820af; text-decoration:underline!important;}
 
 
@@ -35,7 +32,7 @@ a {
 /* Header Style */
 
 html {
-	background-color: #000;
+	background-color: #fff;
 	min-height: 100%;
 }
 table {

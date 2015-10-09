@@ -13,8 +13,8 @@
       %hr.fullhr
   .row
     %h1.performer-title.center Наши гости
-  .row
-    -@guests.each do |g|
+  -@guests.each do |g|
+    .row
       .col-lg-4.col-4.col-sm-12.performer-photo
         =image_tag g.photo.url
       .col-lg-7.col-7.col-sm-10.col-xs-10.performer-content
@@ -25,8 +25,8 @@
         .glyphicon.glyphicon-play
   .row
     %h1.performer-title.center Наши гости
-  .row
-    -@guests.each do |g|
+  -@guests.each do |g|
+    .row
       .col-lg-4.col-4.col-sm-12.performer-photo
         =image_tag g.photo.url
       .col-lg-7.col-7.col-sm-10.col-xs-10.performer-content

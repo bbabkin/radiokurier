@@ -19,8 +19,4 @@
   %tr
     %th= f.label(:permalink, "аудио")
     %td= f.file_field(:permalink)
-  -if @audio_entry.permalink 
-    %tr
-      %th= f.label(:permalink, "аудио ссылка")
-      %td= f.text_field :permalink, size: "80" 
 

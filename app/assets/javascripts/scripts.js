@@ -6,6 +6,7 @@ $(document).ready(function() {
         var audio = $('<audio>', {
              controls : 'controls autoplay'
         });
+	audio.trigger('pause');
  
         var url = $(this).attr('href');
         $('<source>').attr('src', url).appendTo(audio);
@@ -20,6 +21,7 @@ $(document).ready(function() {
              controls : 'controls'
         });
 	audioWrap.className = "animated fadeOutUp";
+	audio.trigger('pause');
     
     });
 });

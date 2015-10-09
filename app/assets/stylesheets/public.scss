@@ -17,13 +17,13 @@ background:url(/assets/mesh.jpg) bottom center no-repeat;
 	background-color: rgba(255,255,255,0.0);
 font-weight: 800;
 a{
-color: #777!important;
-text-shadow: 0 0 10px #fff;
+color: #fff!important;
+text-shadow: 0 0 5px #000;
 &:hover, &:focus{
 background-color: rgba(255,255,255,0)!important;
 text-shadow: 0 0 5px #fff;
        text-decoration:none!important;	
-color: #ed1c24!important;
+color: #1b706f!important;
 }
 	-webkit-transition: all .5s ease-in-out;
 	-moz-transition: all .5s ease-in-out;
@@ -41,7 +41,7 @@ color: #ed1c24!important;
 .navbar-toggle{background-color: #fff;}
 .icon-bar{background-color: #1b706f;}
 .home-content {
-margin-top:10px;
+margin-top:20px;
 }
 .home-strip{
 background:url(/assets/strip.jpg) center center no-repeat;

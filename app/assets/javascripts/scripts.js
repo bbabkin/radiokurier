@@ -6,13 +6,14 @@ $(document).ready(function() {
         var audio = $('<audio>', {
              controls : 'controls'
         });
-	$('player').controls.trigger('pause');
+	audio.trigger('pause');
+ 
         var url = $(this).attr('href');
         $('<source>').attr('src', url).appendTo(audio);
 	audioWrap.style.visibility = "visible";
 	audioWrap.className = "animated fadeInDown";
 	audioSection.html(audio);
-	$('player').controls.trigger('play');
+	audio.trigger('play')
 	return false;
     });
     $('#player-close').click(function(){
@@ -20,7 +21,7 @@ $(document).ready(function() {
              controls : 'controls'
         });
 	audioWrap.className = "animated fadeOutUp";
-	$('player').controls.trigger('pause');
+	audio.trigger('pause');
     
     });
 });

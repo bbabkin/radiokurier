@@ -83,7 +83,14 @@ height:9px;
 padding-left: 19px;
 padding-right: 19px;
 }
-.performer-photo{content:"";}
+.performer-title{
+	margin-top: -6px!important;
+	margin-bottom: 28px;
+font-size: 1.85em;
+font-weight: 700;
+}
+.performer-name{font-size:1.4em; font-weight:700;}
+.performer-photo{content:"";margin-bottom:22px; border: solid 1px #ddd}
 .performer-description {content:'';}
 .performer-play{content:'';}
 

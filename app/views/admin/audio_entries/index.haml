@@ -1,4 +1,7 @@
 -@page_title = "Admin | Выпуски"
+#audio-wrap
+  %section{:id => 'audio', :class => 'player'}
+  #player-close.glyphicon.glyphicon-remove
 %h2 выпуски
 = link_to('добавить выпуск', {:action => 'new'}, :class => 'btn btn-xs btn-warning action new')
 %table.admin-table{:summary => "Audio Clip List"}
@@ -12,5 +15,6 @@
       %td= audio_entry.title
       %td.actions
         = link_to'правка', {:action => 'edit', :id => audio_entry.id}, class: 'btn btn-xs btn-warning'
+        = link_to 'прослушать', audio_entry.permalink.url, class: "btn btn-xs btn-primary html5"
         = link_to"удалить", {:action => 'delete', :id => audio_entry.id}, class: "btn btn-xs btn-danger", confirm: "уверены?"
 

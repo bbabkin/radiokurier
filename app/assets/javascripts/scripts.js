@@ -4,7 +4,7 @@ $(document).ready(function() {
     $('a.html5').click(function() {
  
         var audio = $('<audio>', {
-             controls : 'controls autoplay'
+             controls : 'controls'
         });
 	audio.trigger('pause');
  

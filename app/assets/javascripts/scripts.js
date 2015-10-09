@@ -12,7 +12,7 @@ $(document).ready(function() {
 	audioWrap.style.visibility = "visible";
 	audioWrap.className = "animated fadeInDown";
 	audioSection.html(audio);
-	$('player')controls.trigger('play');
+	$('player').controls.trigger('play');
 	return false;
     });
     $('#player-close').click(function(){

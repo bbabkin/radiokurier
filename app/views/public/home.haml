@@ -7,7 +7,26 @@
       =link_to "Слушать последний выпуск", @audio_entry.permalink.url, class: "html5 btn btn-default btn-courier btn-lg"
     .col-12.home-content
       = @page_section_content.content.html_safe
-.container-fluid  
   .row  
     .col-12
-      .home-strip
+      %hr.fullhr
+  .row
+    .col-sm-12.col-6.col-lg-6.performer-col
+      .row
+        %h1.performer-title.center Наши гости
+        -@guests.each do |g|
+          .col-lg-4.col-4.col-sm-12.performer-photo
+            =image_tag g.photo.url
+          .col-lg-7.col-7.col-sm-10.col-xs-10.performer-description
+            =g.description
+          .col-lg-1.col-1.col-sm-2.col-xs-2.performer-play
+            = link_to '', g.permalink.url, class: "glyphicon glyphicon-play html5"
+            .glyphicon.glyphicon-play
+    .col-sm-12.col-6.col-lg-6.performer-col
+      .row
+        %h1.performer-title.center Наши таланты
+        .col-lg-4.col-4.col-sm-12.performer-photo
+        .col-lg-7.col-7.col-sm-10.col-xs-10.performer-description
+        .col-lg-1.col-1.col-sm-2.col-xs-2.performer-play
+          .glyphicon.glyphicon-play
+

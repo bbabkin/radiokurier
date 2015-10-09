@@ -1,5 +1,5 @@
 /*---OVERRIDES---*/
-$mainfont: 'Lato', Arial,  sans-serif;
+$mainfont: 'Exo 2', Arial,  sans-serif;
 
 /* General Demo Style */
 
@@ -79,7 +79,8 @@ margin-bottom: 10px;
 	border-width: 1px;
 	border-color: white;
 }
-.pad {
+.pad10 {
+	padding:10px;
 }
 .nopad {
 	padding: 0px !important;
@@ -170,7 +171,8 @@ position: fixed;
 width: 356px;
 height: 60px;
 top: 0px;
-left: 313px;
+left: 50%;
+margin-left: -178px;
 padding:15px;
 background: #eee;
 border-bottom-left-radius:18px;

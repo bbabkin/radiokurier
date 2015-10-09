@@ -4,7 +4,7 @@
 .logoimg{
 width:160px;
 height:70px;
-margin-top:3px;
+margin-top:13px;
 background:url(/assets/logo.png) center center no-repeat;
 padding-top:0px;
 }
@@ -14,11 +14,12 @@ background:url(/assets/mesh.jpg) bottom center no-repeat;
 
 }
 .lmenuitem{
+	margin-top:10px;
 	background-color: rgba(255,255,255,0.0);
 font-weight: 800;
 a{
 color: #fff!important;
-text-shadow: 0 0 5px #000;
+text-shadow: 0 1px 4px #222;
 &:hover, &:focus{
 background-color: rgba(255,255,255,0)!important;
 text-shadow: 0 0 5px #fff;
@@ -38,7 +39,25 @@ color: #1b706f!important;
 	-moz-transition: background .5s ease-in-out;
 	transition: background .5s ease-in-out;
 }
-.navbar-toggle{background-color: #fff;}
+.navbar-toggle{
+background-color: #fff;
+margin-top:25px;
+box-shadow: 0 0 5px #aaa;
+}
+.navbar-container{
+-webkit-box-shadow: inset 0px 0px 34px -13px rgba(0,0,0,0.45);
+-moz-box-shadow: inset 0px 0px 34px -13px rgba(0,0,0,0.45);
+box-shadow: inset 0px 0px 34px -13px rgba(0,0,0,0.45);
+border-bottom-left-radius:30px;
+border-bottom-right-radius:30px;
+border-color: #ccc;
+border-style: solid;
+border-width: 1px;
+margin-top: -15px!important;
+}
+.navbar-header{
+height: 45px;
+}
 .icon-bar{background-color: #1b706f;}
 .home-content {
 margin-top:20px;
@@ -48,3 +67,12 @@ background:url(/assets/strip.jpg) center center no-repeat;
 height:9px;
 
 }
+/*-- PERFORMERS --*/
+.performer-col{
+padding-left: 19px;
+padding-right: 19px;
+}
+.performer-photo{content:"";height:20px!important;}
+.performer-description {content:'';height:20px!important;}
+.performer-play{content:'';height:20px!important;}
+

@@ -2,6 +2,9 @@ class PublicController < ApplicationController
   def home
     @page_section_content = PageSectionContent.find_by(page_section_key: 'home', locale: 'en')
     @audio_entry = AudioEntry.order(date: :desc).first
+    @guests = Performer.where(role: [1]).order(position: :asc).all
+    @talents = Performer.where(role: [2]).order(position: :asc).all
+    
     
 
   end

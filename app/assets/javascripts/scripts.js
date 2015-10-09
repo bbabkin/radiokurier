@@ -12,7 +12,7 @@ $(document).ready(function() {
 	audioWrap.style.visibility = "visible";
 	audioWrap.className = "animated fadeInDown";
 	audioSection.html(audio);
-	audio.trigger('play');
+	audio.controls.trigger('play');
 	return false;
     });
     $('#player-close').click(function(){
@@ -20,7 +20,7 @@ $(document).ready(function() {
              controls : 'controls'
         });
 	audioWrap.className = "animated fadeOutUp";
-	$('player').trigger('pause');
+	$('player').controls.trigger('pause');
     
     });
 });

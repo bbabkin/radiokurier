@@ -29,7 +29,7 @@ class Admin::PerformersController < ApplicationController
 	def update
 		@performer = Performer.find params[:id]
 
-		if @performer.update_attributes(audio_entry_params)
+		if @performer.update_attributes(performer_params)
 			flash[:notice] = "обновили!"
 			redirect_to admin_performers_path
 		else

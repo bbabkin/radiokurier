@@ -18,6 +18,7 @@
     %td= f.file_field(:photo)
   -if @performer.photo.present?
     %tr
+      %tr
       %td
         =image_tag @performer.photo
   %tr

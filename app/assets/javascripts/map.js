@@ -59,7 +59,7 @@ function gmap1_show() {
   function(){
     marker = handler.addMarkers([    
       {
-        "lat": 43.779908, ,  
+        "lat": 43.779908,  
         "lng": -79.475008,
         "picture": {
           "url": 'https://s3.amazonaws.com/radiokurier/favicon.png',

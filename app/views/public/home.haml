@@ -5,8 +5,9 @@
   .row
     .col-lg-4.col-4.col-sm-4.col-xs-12.col-xs-pull-12.center
       -if @banner1
-        .ad=link_to @banner1.permalink do
-          =image_tag @banner1.image1.url
+        .ad
+          =link_to @banner1.permalink do
+            =image_tag @banner1.image1.url
     .col-lg-4.col-4.col-sm-4.col-xs-12.col-xs-push-12.center
       =link_to @audio_entry.permalink.url, class: "html5" do
         .play-button
@@ -15,8 +16,9 @@
         %span= @audio_entry.date.strftime("%d.%m.%Y")
     .col-lg-4.col-4.col-sm-4.col-xs-12.center
       -if @banner2
-        .ad=link_to @banner2.permalink do
-          =image_tag @banner2.image1.url
+        .ad
+          =link_to @banner2.permalink do
+            =image_tag @banner2.image1.url
   .row 
     .col-12.home-content
       = @page_section_content.content.html_safe

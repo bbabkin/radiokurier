@@ -28,7 +28,8 @@
         .performer-name=g.title
         .performer-description=g.description
         .performer-play.center
-          = link_to '', g.permalink.url, class: "play-button-sm"
+          =link_to g.permalink.url, class: "html5" do
+            .play-button-sm
   .row  
     .col-12
       %hr.fullhr
@@ -41,7 +42,8 @@
       .col-lg-7.col-7.col-sm-10.col-xs-10.performer-content
         .performer-name=g.title
         .performer-description=g.description
-      .col-lg-1.col-1.col-sm-2.col-xs-2.performer-play
-        = link_to '', g.permalink.url, class: "glyphicon glyphicon-play html5"
+        .performer-play.center
+          =link_to g.permalink.url, class: "html5" do
+            .play-button-sm
 
   

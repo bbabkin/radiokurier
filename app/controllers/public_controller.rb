@@ -20,7 +20,9 @@ class PublicController < ApplicationController
   end
   def contact
     @page_section_content = PageSectionContent.find_by(page_section_key: 'contact', locale: 'en')
-  end
+		render layout: "js_before"
+
+end
 
   def privacypoicy
     @page_section_content = PageSectionContent.find_by(page_section_key: 'privacy', locale: 'en')

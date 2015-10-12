@@ -50,7 +50,7 @@ function gmap1_show() {
     provider: {
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles:    mapStyle,
-      center:    new google.maps.LatLng(43.650639, -79.377736),
+      center:    new google.maps.LatLng( 43.779908, -79.475008),
       zoom:      16,
       disableDefaultUI: true
     }, 
@@ -59,10 +59,10 @@ function gmap1_show() {
   function(){
     marker = handler.addMarkers([    
       {
-        "lat": 43.650639,  
-        "lng": -79.377636,
+        "lat": 43.779908, ,  
+        "lng": -79.475008,
         "picture": {
-          "url": 'http://s3.amazonaws.com/sasgold/uploads/favicon32.png',
+          "url": 'https://s3.amazonaws.com/radiokurier/favicon.png',
           "width":  64,
           "height": 64
         },

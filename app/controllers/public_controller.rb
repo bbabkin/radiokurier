@@ -13,8 +13,9 @@ class PublicController < ApplicationController
   end
   def archive
     @page_section_content = PageSectionContent.find_by(page_section_key: 'archive', locale: 'en')
+    @audio_entries = AudioEntry.order(date: :desc).all
   end
-    def advert
+  def advert
     @page_section_content = PageSectionContent.find_by(page_section_key: 'advert', locale: 'en')
   end
   def contact

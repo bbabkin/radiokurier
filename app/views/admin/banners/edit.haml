@@ -1,6 +1,6 @@
 - @page_title = "Update Team Member Entry"
 = link_to("<< назад", {:action => 'index'}, :class => 'btn btn-xs btn-warning back-link')
-%h2 обновить исполнителя
+%h2 обновить баннер
 = form_for [:admin, @member_entry], :html => {:multipart => true} do |f|
   = render(:partial => "form", :locals => {:f => f})
   .form-buttons

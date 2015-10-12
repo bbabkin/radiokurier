@@ -1,2 +1,17 @@
-%p 
-  = @page_section_content.content.html_safe
+#audio-wrap
+  %section{:id => 'audio', :class => 'player'}
+  #player-close.glyphicon.glyphicon-remove
+.container
+  .row
+    .col-12.center
+      = @page_section_content.content.html_safe
+  - @audio_entries.each do |audio_entry|
+    .row
+      .col-lg-1.col-1.col-xs-3.archive-date
+        .date.center
+          = audio_entry.date.strftime("%b %d, %Y")
+      .col-lg-1.col-1.col-xs-3.archive-play.center
+        =link_to @audio_entry.permalink.url, class: "html5" do
+          .play-button-sm
+      .col-lg-9.col-9.col-xs-12.archive-description
+        = audio_entry.descripion

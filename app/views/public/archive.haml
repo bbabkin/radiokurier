@@ -11,7 +11,7 @@
         .date.center
           = audio_entry.date.strftime("%b %d, %Y")
       .col-lg-1.col-1.col-xs-3.archive-play.center
-        =link_to @audio_entry.permalink.url, class: "html5" do
+        =link_to audio_entry.permalink.url, class: "html5" do
           .play-button-sm
       .col-lg-9.col-9.col-xs-12.archive-description
         = audio_entry.descripion

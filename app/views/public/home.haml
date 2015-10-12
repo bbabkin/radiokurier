@@ -3,18 +3,36 @@
   #player-close.glyphicon.glyphicon-remove
 .container
   .row
-    .col-12.center
+    .col-lg-4.col-4.col-sm-4.col-xs-12.center
+      -if @banner1
+        =link_to @banner1.permalink do
+          =image_tag @banner1.image1.url
+    .col-lg-4.col-4.col-sm-4.col-xs-12.center
       =link_to @audio_entry.permalink.url, class: "html5" do
         .play-button
+      .date.center
+        %span выпуск от 
+        %span= @audio_entry.date.strftime("%d.%m.%Y")
+    .col-lg-4.col-4.col-sm-4.col-xs-12.center
+      -if @banner2
+        =link_to @banner2.permalink do
+          =image_tag @banner2.image1.url
+  .row 
     .col-12.home-content
       = @page_section_content.content.html_safe
   .row
     .col-12
       %hr.fullhr
   .row
-    .col-lg-4.col-4.col-xs-4.center=image_tag "ntv.png"
-    .col-lg-4.col-4.col-xs-4.center=image_tag "courier.png"
-    .col-lg-4.col-4.col-xs-4.center=image_tag "parter.png"
+    .col-lg-4.col-4.col-xs-4.center
+      =link_to "http://www.ntv-canada.com/" do
+        =image_tag "courier.png"
+    .col-lg-4.col-4.col-xs-4.center
+      =link_to "http://www.ntv-canada.com/" do
+        =image_tag "ntv.png"
+    .col-lg-4.col-4.col-xs-4.center
+      =link_to "http://www.parter.ca/" do
+        =image_tag "parter.png"
   .row  
     .col-12
       %hr.fullhr
@@ -45,5 +63,5 @@
         .performer-play.center
           =link_to g.permalink.url, class: "html5" do
             .play-button-sm
-
+=render partial: "layouts/footer"
   

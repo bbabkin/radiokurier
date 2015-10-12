@@ -1,16 +1,16 @@
--@page_title = "| связь"
-.content-bg.about-content
+-@page_title = "связь"
+.container
   .row
     .mapcontainer.col-12.col-sm-12.col-xs-12
-      #map1
-      :javascript
-        $(document).ready(function(){
-          gmap1_show();
-        });
+      #map
+        :javascript
+          $(document).ready(function(){
+            gmap1_show();
+          });
       .openmap=link_to "открыть в google maps","https://www.google.ca/maps?q=312+Dolomite+Dr&es_sm=91&um=1&ie=UTF-8&sa=X&ved=0CAcQ_AUoAWoVChMI6767wsa9yAIVBmk-Ch0fCg9t", :target => "_blank" 
   .row
-    .addresscontainer.col-md-3.col-sm-3.col-lg-3.col-xs-12
-      .contact
+    .addresscontainer.col-12.centered
+      .contact.center
         .title Canadian Courier  |  NTV Canada  |  Studio N
         .address 312 Dolomite Dr., Unit 121
         .address Toronto, ON, M3J 2N2

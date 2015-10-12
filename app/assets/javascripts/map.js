@@ -51,22 +51,22 @@ function gmap1_show() {
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       styles:    mapStyle,
       center:    new google.maps.LatLng( 43.779908, -79.475008),
-      zoom:      16,
+      zoom:      14,
       disableDefaultUI: true
     }, 
-    internal: {id: 'map1'}
+    internal: {id: 'map'}
   }, 
   function(){
     marker = handler.addMarkers([    
       {
-        "lat": 43.779908,  
-        "lng": -79.475008,
+        "lat": 43.779880,  
+        "lng": -79.474590,
         "picture": {
           "url": 'https://s3.amazonaws.com/radiokurier/favicon.png',
-          "width":  64,
-          "height": 64
+          "width":  32,
+          "height": 32
         },
-        "infowindow": "Corporate Head Office Location"
+        "infowindow": "Canadian Courier | NTV Canada | Radio Courier"
       }
   ]);
 

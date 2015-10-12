@@ -113,3 +113,36 @@ img{border: solid 1px #ddd}}
 /*----Archive-----*/
 .archive-date {margin-top:7px;}
 .archive-description {margin-top:7px;}
+
+/*---Contact---*/
+#map{height:500px;}
+
+
+/*----FOOTER-----*/
+
+#footer-wrap{
+	position:absolute;
+	top:0;
+	bottom:0;
+height:100%;
+width:100%;
+	#footer{
+	-webkit-box-shadow: inset 0px 0px 34px -13px rgba(0,0,0,0.45);
+	-moz-box-shadow: inset 0px 0px 34px -13px rgba(0,0,0,0.45);
+	box-shadow: inset 0px 0px 34px -13px rgba(0,0,0,0.45);
+	border-top-left-radius:30px;
+	border-top-right-radius:30px;
+	border-color: #ccc;
+	border-style: solid;
+	border-width: 1px;	
+position:absolute;
+	background:url(/assets/mesh_bottom.jpg) bottom center no-repeat;
+	bottom: 0px;
+	left: 0;
+	right: 0;
+	height: 30px;
+text-align: center;
+margin:0 auto;
+.footer-link{margin-left: 10px; margin-right:10px;}
+}
+}

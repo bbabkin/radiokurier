@@ -4,6 +4,8 @@ class PublicController < ApplicationController
     @audio_entry = AudioEntry.order(date: :desc).first
     @guests = Performer.where(role: [1]).order(position: :asc).all
     @talents = Performer.where(role: [2]).order(position: :asc).all
+    @banner1 = Banner.order(position: :asc).first
+    @banner2 = Banner.order(position: :asc).second
     
     
 
@@ -19,8 +21,8 @@ class PublicController < ApplicationController
     @page_section_content = PageSectionContent.find_by(page_section_key: 'advert', locale: 'en')
   end
   def contact
-    @page_section_content = PageSectionContent.find_by(page_section_key: 'contact', locale: 'en')
 		render layout: "js_before"
+    @page_section_content = PageSectionContent.find_by(page_section_key: 'contact', locale: 'en')
 
 end
 

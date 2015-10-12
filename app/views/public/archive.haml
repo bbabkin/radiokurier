@@ -10,7 +10,7 @@
     .row
       .col-lg-1.col-1.col-sm-1.col-xs-3.archive-date
         .date.center
-          = audio_entry.date.strftime("%b %d, %Y")
+          = audio_entry.date.strftime("%d %m, %Y")
       .col-lg-1.col-1.col-sm-1.col-xs-3.archive-play.center
         =link_to audio_entry.permalink.url, class: "html5" do
           .play-button-sm

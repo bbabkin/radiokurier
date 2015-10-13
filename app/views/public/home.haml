@@ -3,18 +3,18 @@
   #player-close.glyphicon.glyphicon-remove
 .container
   .row
-    .col-lg-4.col-4.col-sm-4.col-xs-12.col-xs-pull-12.center
+    .col-lg-4.col-4.col-sm-4.hidden-xs.center
       -if @banner1
         .ad
           =link_to @banner1.permalink do
             =image_tag @banner1.image1.url
-    .col-lg-4.col-4.col-sm-4.col-xs-12.col-xs-push-12.center
+    .col-lg-4.col-4.col-sm-4.col-xs-12.center
       =link_to @audio_entry.permalink.url, class: "html5" do
         .play-button
       .date.center
         %span выпуск от 
         %span= @audio_entry.date.strftime("%d.%m.%Y")
-    .col-lg-4.col-4.col-sm-4.col-xs-12.center
+    .col-lg-4.col-4.col-sm-4.hidden-xs.center
       -if @banner2
         .ad
           =link_to @banner2.permalink do
@@ -42,9 +42,9 @@
     %h1.performer-title.center Наши гости
   -@guests.each do |g|
     .row
-      .col-lg-4.col-4.col-sm-12.performer-photo
+      .col-lg-4.col-4.col-sm-12.performer-photo.centered
         =image_tag g.photo.url
-      .col-lg-7.col-7.col-sm-10.col-xs-10.performer-content
+      .col-lg-7.col-7.col-sm-10.col-xs-10.performer-content.centered
         .performer-name=g.title
         .performer-description=g.description
         .performer-play.center
@@ -57,9 +57,9 @@
     %h1.performer-title.center Наши таланты
   -@talents.each do |g|
     .row
-      .col-lg-4.col-4.col-sm-12.performer-photo
+      .col-lg-4.col-4.col-sm-12.performer-photo.centered
         =image_tag g.photo.url
-      .col-lg-7.col-7.col-sm-10.col-xs-10.performer-content
+      .col-lg-7.col-7.col-sm-10.col-xs-10.performer-content.centered
         .performer-name=g.title
         .performer-description=g.description
         .performer-play.center
